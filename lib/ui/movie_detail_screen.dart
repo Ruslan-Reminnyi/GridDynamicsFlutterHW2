@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_movi_demo/data/movie.dart';
+import 'package:flutter_movi_demo/ui/comment_screen.dart';
 
 class MovieDetailScreen extends StatelessWidget {
   final Movie _detail;
@@ -62,7 +63,11 @@ class MovieDetailScreen extends StatelessWidget {
         Positioned(
           left: 40,
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CommentScreen()));
+            },
             color: Colors.white,
             icon: Icon(Icons.chat_bubble_outline),
           ),
